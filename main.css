@@ -192,7 +192,8 @@ header {
 }
 
 .gender .genderContainer button {
-  width: 30%;
+  width: 40%;
+  min-width: 100px;
 }
 
 .gender .genderContainer button:nth-child(1) {
@@ -210,9 +211,15 @@ header {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  padding: 24px;
 }
 
-.bmi .bmi-scale {
+.bmi .bmi-container {
+  width: 90%;
+  position: relative;
+}
+
+.bmi .bmi-container .bmi-scale {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -220,6 +227,77 @@ header {
   -webkit-box-direction: normal;
       -ms-flex-flow: row nowrap;
           flex-flow: row nowrap;
+  color: #fff;
+  width: 100%;
+}
+
+.bmi .bmi-container .bmi-scale > div {
+  padding: 8px 16px;
+  font-size: 12px;
+  text-align: center;
+  border-left: 1px solid #fff;
+}
+
+.bmi .bmi-container .bmi-scale > div:first-child {
+  border-bottom-left-radius: 20px;
+  border-top-left-radius: 20px;
+  width: 22.5%;
+  border: none;
+}
+
+.bmi .bmi-container .bmi-scale > div:last-child {
+  border-bottom-right-radius: 20px;
+  border-top-right-radius: 20px;
+  width: 20%;
+}
+
+.bmi .bmi-container .bmi-scale .red {
+  background-color: #ED1C24;
+}
+
+.bmi .bmi-container .bmi-scale .green {
+  background-color: #78A50E;
+  width: 32.5%;
+}
+
+.bmi .bmi-container .bmi-scale .yellow {
+  background-color: #FDB913;
+  width: 25%;
+}
+
+.bmi .bmi-container .marker1 {
+  position: absolute;
+  bottom: -24px;
+  color: #000;
+  margin-left: -10px;
+  left: 22.5%;
+}
+
+.bmi .bmi-container .marker2 {
+  position: absolute;
+  bottom: -24px;
+  color: #000;
+  margin-left: -8px;
+  left: 55%;
+}
+
+.bmi .bmi-container .marker3 {
+  position: absolute;
+  bottom: -24px;
+  color: #000;
+  margin-left: -8px;
+  left: 80%;
+}
+
+.bmi .bmi-container .arrow {
+  position: absolute;
+  height: 20px;
+  width: 20px;
+  background-image: url(./Triangle.svg);
+  background-repeat: no-repeat;
+  background-size: 20px 20px;
+  top: -18px;
+  left: 44%;
 }
 
 button {
@@ -277,7 +355,7 @@ button.xs {
 
 input {
   font-weight: 600;
-  color: #11A8A8;
+  color: #3E3934;
   background-color: #fff;
   border: 1px solid #B7B1A9;
   padding: 8px 16px;
@@ -324,6 +402,7 @@ h4 {
   margin-top: 11.431px;
   margin-bottom: 11.431px;
   display: block;
+  color: #3E3934;
 }
 
 h5 {
